@@ -3,7 +3,7 @@ require 'mkmf'
 RbConfig::MAKEFILE_CONFIG['CC'] = ENV['CC'] if ENV['CC']
 
 $CFLAGS << " #{ENV["CFLAGS"]}"
-$CFLAGS << " -std=gnu++98"
+$CFLAGS << " -std=gnu89"
 $CFLAGS << " -g"
 $CFLAGS << " -O3" unless $CFLAGS[/-O\d/]
 $CFLAGS << " -Wall -Wno-comment"
